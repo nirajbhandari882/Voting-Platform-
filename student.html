@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app-layout">
+  <aside class="sidebar">
+    <div>
+      <img src="gehu-logo.png" class="logo" />
+      <div class="menu">
+        <a class="active">Dashboard</a>
+        <a>Vote</a>
+        <a>Results</a>
+        <a>Profile</a>
+        <a>Help & Support</a>
+      </div>
+    </div>
+    <button onclick="logout()" class="logout-link">Logout</button>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-head">
+      <div>
+        <h1>Welcome, <span id="loggedStudentName"></span> 👋</h1>
+        <p>BCA Student</p>
+      </div>
+      <div class="profile-circle">N</div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <h3>Election Status</h3>
+        <strong id="studentElectionStatus">LIVE</strong>
+      </div>
+
+      <div class="stat-card">
+        <h3>Votes Cast</h3>
+        <strong><span id="studentVotesCast">0</span> / 1</strong>
+      </div>
+
+      <div class="stat-card">
+        <h3>Time Left</h3>
+        <strong id="countdown">Loading...</strong>
+      </div>
+    </div>
+
+    <h2 class="section-title">Candidates</h2>
+    <p class="muted">Select one candidate to cast your vote.</p>
+
+    <div id="candidateList" class="candidate-grid"></div>
+
+    <div id="voteConfirmation" class="confirmation hidden"></div>
+
+    <div class="note">
+      Note: Once you cast your vote, you cannot change it.
+    </div>
+
+    <h2 class="section-title">Live Results</h2>
+    <div id="studentResults"></div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

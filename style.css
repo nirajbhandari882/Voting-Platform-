@@ -1,0 +1,568 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --navy: #071b3a;
+  --red: #d71920;
+  --bg: #f4f7fb;
+  --white: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e5e7eb;
+  --green: #16a34a;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+
+.top-nav {
+  width: 96%;
+  height: 92px;
+  margin: 16px auto 0;
+  padding: 12px 32px;
+  background: white;
+  border-radius: 22px 22px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 170px;
+  object-fit: contain;
+}
+
+.top-nav nav {
+  display: flex;
+  gap: 34px;
+}
+
+.top-nav nav a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nav-btn,
+.dark-btn {
+  background: var(--navy);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* LANDING HERO */
+
+.hero {
+  width: 96%;
+  height: 620px;
+  margin: auto;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.98) 0%,
+      rgba(255,255,255,0.88) 42%,
+      rgba(255,255,255,0.18) 100%
+    ),
+    url("campus.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 28px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  padding: 90px 70px;
+  max-width: 560px;
+}
+
+.tag {
+  color: var(--red);
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: 66px;
+  line-height: 1.05;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  color: var(--red);
+}
+
+.sub-text {
+  color: #334155;
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.primary-btn,
+.outline-btn {
+  display: inline-block;
+  padding: 15px 26px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: none;
+  font-weight: 900;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.primary-btn {
+  background: var(--red);
+  color: white;
+}
+
+.outline-btn {
+  background: white;
+  color: var(--navy);
+  border: 1px solid #cbd5e1;
+}
+
+/* STATUS CARD */
+
+.status-strip {
+  width: 72%;
+  margin: -72px auto 45px;
+  background: var(--navy);
+  color: white;
+  padding: 28px 36px;
+  border-radius: 22px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 25px 60px rgba(7, 27, 58, 0.3);
+}
+
+.status-strip h3 {
+  margin-bottom: 8px;
+}
+
+.live {
+  color: #22c55e;
+  font-weight: 900;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.timer small {
+  display: block;
+  font-size: 12px;
+  color: #cbd5e1;
+  margin-top: 6px;
+}
+
+/* FEATURE + LOGIN */
+
+.features,
+.login-section {
+  width: 86%;
+  margin: 42px auto;
+  display: grid;
+  gap: 28px;
+}
+
+.features {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.login-section {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.feature-card,
+.login-card {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.feature-card h3,
+.login-card h2 {
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.feature-card p,
+.login-card p,
+.login-card small {
+  color: var(--muted);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 14px;
+  border: 1px solid #dbe1ea;
+  border-radius: 12px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--navy);
+}
+
+.full {
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* FOOTER */
+
+footer {
+  width: 96%;
+  margin: 50px auto 16px;
+  background: white;
+  padding: 26px;
+  text-align: center;
+  border-radius: 20px;
+  color: var(--muted);
+}
+
+/* DASHBOARD LAYOUT */
+
+.app-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: var(--bg);
+}
+
+.sidebar {
+  background: linear-gradient(180deg, var(--navy), #020617);
+  color: white;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .logo {
+  width: 175px;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.menu {
+  margin-top: 38px;
+  display: grid;
+  gap: 14px;
+}
+
+.menu a,
+.logout-link {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.menu a.active,
+.menu a:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.logout-link {
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.main-content {
+  padding: 34px;
+}
+
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.page-head h1 {
+  font-size: 32px;
+  color: var(--navy);
+}
+
+.page-head p,
+.muted {
+  color: var(--muted);
+}
+
+.profile-circle {
+  width: 46px;
+  height: 46px;
+  background: #e2e8f0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+  font-weight: 900;
+}
+
+/* DASHBOARD CARDS */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.stat-card,
+.panel,
+.candidate-card,
+.result-row {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 14px 38px rgba(15,23,42,0.07);
+}
+
+.stat-card h3 {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.stat-card strong {
+  color: var(--navy);
+  font-size: 26px;
+}
+
+.section-title {
+  margin: 28px 0 8px;
+  color: var(--navy);
+}
+
+/* CANDIDATES */
+
+.candidate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.candidate-card {
+  text-align: center;
+}
+
+.podium-icon {
+  width: 95px;
+  height: 95px;
+  margin: auto auto 16px;
+  background: linear-gradient(135deg, #eff6ff, #fff1f2);
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 44px;
+}
+
+.candidate-no {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  background: var(--navy);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.candidate-card h3 {
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.candidate-card p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.note {
+  background: #fff1f2;
+  color: #7f1d1d;
+  padding: 16px;
+  border-radius: 14px;
+  margin-top: 24px;
+  font-weight: 700;
+}
+
+.confirmation {
+  background: #ecfdf5;
+  color: #166534;
+  border: 1px solid #22c55e;
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 22px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ADMIN */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.panel p {
+  color: var(--muted);
+}
+
+.control-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.green-btn,
+.orange-btn,
+.red-btn {
+  border: none;
+  padding: 13px 16px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.green-btn {
+  background: #059669;
+}
+
+.orange-btn {
+  background: #f59e0b;
+}
+
+.red-btn {
+  background: #dc2626;
+}
+
+.progress {
+  height: 9px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: var(--red);
+}
+
+.result-row {
+  margin-top: 14px;
+}
+
+.notification {
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8fafc;
+  margin-bottom: 10px;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1000px) {
+  .top-nav nav {
+    display: none;
+  }
+
+  .logo {
+    width: 135px;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero-content {
+    padding: 60px 32px 120px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .status-strip,
+  .features,
+  .login-section {
+    width: 92%;
+    grid-template-columns: 1fr;
+  }
+
+  .timer {
+    font-size: 24px;
+  }
+
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .stat-grid,
+  .candidate-grid,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

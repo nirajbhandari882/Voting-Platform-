@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app-layout">
+  <aside class="sidebar">
+    <div>
+      <img src="gehu-logo.png" class="logo" />
+      <div class="menu">
+        <a class="active">Dashboard</a>
+        <a>Candidates</a>
+        <a>Election Control</a>
+        <a>Results</a>
+        <a>Notifications</a>
+      </div>
+    </div>
+    <button onclick="logout()" class="logout-link">Logout</button>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-head">
+      <div>
+        <h1>Admin Dashboard</h1>
+        <p>Welcome back, Admin</p>
+      </div>
+      <div class="profile-circle">A</div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <h3>Total Students</h3>
+        <strong>10</strong>
+      </div>
+
+      <div class="stat-card">
+        <h3>Votes Cast</h3>
+        <strong id="adminVotesCast">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <h3>Voting %</h3>
+        <strong id="votingPercent">0%</strong>
+      </div>
+
+      <div class="stat-card">
+        <h3>Status</h3>
+        <strong id="adminElectionStatus">LIVE</strong>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <section class="panel">
+        <h2>Election Control</h2>
+        <p>Manage election status</p>
+
+        <div class="control-buttons">
+          <button onclick="setElectionStatus('LIVE')" class="green-btn">Start Election</button>
+          <button onclick="setElectionStatus('PAUSED')" class="orange-btn">Pause Election</button>
+          <button onclick="setElectionStatus('ENDED')" class="red-btn">End Election</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Live Results</h2>
+        <p>Real-time vote count</p>
+        <div id="adminResults"></div>
+      </section>
+    </div>
+
+    <div class="dashboard-grid">
+      <section class="panel">
+        <h2>Add Candidate</h2>
+        <input type="text" id="newCandidateName" placeholder="Candidate Name" />
+        <input type="text" id="newCandidateParty" placeholder="Position" />
+        <textarea id="newCandidateManifesto" placeholder="Candidate Manifesto"></textarea>
+        <button onclick="addCandidate()" class="primary-btn full">Add Candidate</button>
+      </section>
+
+      <section class="panel">
+        <h2>Recent Notifications</h2>
+        <div id="notificationPanel"></div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <h2>Candidate Management</h2>
+      <div id="adminCandidateList"></div>
+    </section>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

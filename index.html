@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEHU Voting Platform 2026</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-nav">
+  <img src="gehu-logo.png" class="logo" />
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About Election</a>
+    <a href="#login">Login</a>
+    <a href="#support">Contact Support</a>
+  </nav>
+  <button class="nav-btn" onclick="document.getElementById('adminBox').scrollIntoView()">Admin Login</button>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="tag">STUDENT COUNCIL ELECTION 2026</p>
+    <h1>Your Voice.<br><span>Your Vote.</span><br>Your Future.</h1>
+    <p class="sub-text">Be a part of the change. Vote for your Class Representative.</p>
+    <a href="#login" class="primary-btn">Student Login</a>
+    <a href="#about" class="outline-btn">Learn More</a>
+  </div>
+</section>
+
+<section class="status-strip">
+  <div>
+    <h3>Election Status</h3>
+    <p class="live">● LIVE</p>
+    <small>Bachelor of Computer Applications (BCA)</small>
+  </div>
+  <div class="timer" id="countdown">Loading...</div>
+</section>
+
+<section class="features" id="about">
+  <div class="feature-card">
+    <h3>🛡 Secure & Verified</h3>
+    <p>Only verified students can vote.</p>
+  </div>
+  <div class="feature-card">
+    <h3>✅ One Student One Vote</h3>
+    <p>Duplicate voting is not allowed.</p>
+  </div>
+  <div class="feature-card">
+    <h3>📊 Fair & Transparent</h3>
+    <p>Live results with complete transparency.</p>
+  </div>
+</section>
+
+<section class="login-section" id="login">
+  <div class="login-card">
+    <h2>Student Login</h2>
+    <p>Login using your registered details</p>
+    <input type="text" id="studentName" placeholder="Full Name" />
+    <input type="text" id="studentId" placeholder="Unique ID" />
+    <button onclick="studentLogin()" class="primary-btn full">Login & Continue</button>
+    <small>Example: 202601 - Niraj Singh Bhandari</small>
+  </div>
+
+  <div class="login-card" id="adminBox">
+    <h2>Admin Login</h2>
+    <p>Authorized access only</p>
+    <input type="text" id="adminUsername" placeholder="Username" />
+    <input type="password" id="adminPassword" placeholder="Password" />
+    <button onclick="adminLogin()" class="dark-btn full">Login to Dashboard</button>
+    <small>Username: admin | Password: gehu2026</small>
+  </div>
+</section>
+
+<footer id="support">
+  <p>Contact Support: <b>contact@mr.niraj</b></p>
+  <p>© 2026 Graphic Era Hill University. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
