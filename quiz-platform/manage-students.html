@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Students | GEHU Quiz</title>
+<link rel="stylesheet" href="manage-students.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar">
+
+        <img src="gehu-logo.png" class="admin-logo" alt="GEHU Logo">
+
+        <h2>Admin Panel</h2>
+
+        <a href="admin-dashboard.html">🏠 Dashboard</a>
+        <a href="manage-questions.html">📝 Manage Questions</a>
+        <a class="active" href="manage-students.html">👥 Students</a>
+        <a href="admin-results.html">📊 Results</a>
+        <a href="leaderboard.html">🏆 Leaderboard</a>
+        <a href="logout.html">🚪 Logout</a>
+
+    </aside>
+
+    <main class="admin-main">
+
+        <div class="page-header">
+            <div>
+                <h1>Manage Students</h1>
+                <p>View, search and manage registered students.</p>
+            </div>
+
+            <div class="count-box">
+                Total Students: <span id="studentCount">0</span>
+            </div>
+        </div>
+
+        <section class="student-table-card">
+
+            <div class="table-header">
+                <h2>Student List</h2>
+                <input type="text" id="searchStudent" placeholder="Search student..." onkeyup="searchStudents()">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Student Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable"></tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="admin-auth.js"></script>
+<script src="manage-students.js"></script>
+
+</body>
+</html>

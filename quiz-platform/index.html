@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEHU Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="gehu-logo.png" alt="GEHU Logo">
+    </div>
+
+    <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <a href="login.html" class="login-btn">Login</a>
+
+</nav>
+
+<section class="hero" id="about">
+
+    <div class="hero-text">
+
+        <div class="tag">✨ Welcome to GEHU Quiz Platform</div>
+
+        <h1>
+            Test Your Knowledge with
+            <span>Graphic Era Hill University</span>
+        </h1>
+
+        <p>
+            Take smart quizzes, improve your skills,
+            compete with classmates and climb the leaderboard.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="dashboard.html" class="start-btn">Start Quiz 🚀</a>
+            <a href="#categories" class="explore-btn">Explore Categories →</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="features">
+
+    <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Smart Quizzes</h3>
+        <p>Practice questions added by admin.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h3>Student Login</h3>
+        <p>Register and access your dashboard.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>Track Progress</h3>
+        <p>View quiz history and result performance.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Leaderboard</h3>
+        <p>Compete with classmates and rank higher.</p>
+    </div>
+
+</section>
+
+<section class="categories" id="categories">
+
+    <h2>Quiz Categories</h2>
+    <p>Choose a category and view quiz details before starting.</p>
+
+    <div class="category-grid">
+
+        <a href="category.html?category=Programming" class="category-card purple">
+            <span>💻</span>
+            <div>
+                <h3>Programming</h3>
+                <p><span id="homeProgrammingCount">0</span> Questions</p>
+            </div>
+        </a>
+
+        <a href="category.html?category=Aptitude" class="category-card orange">
+            <span>🧠</span>
+            <div>
+                <h3>Aptitude</h3>
+                <p><span id="homeAptitudeCount">0</span> Questions</p>
+            </div>
+        </a>
+
+        <a href="category.html?category=General Knowledge" class="category-card green">
+            <span>🌍</span>
+            <div>
+                <h3>General Knowledge</h3>
+                <p><span id="homeGKCount">0</span> Questions</p>
+            </div>
+        </a>
+
+        <a href="category.html?category=Current Affairs" class="category-card blue">
+            <span>📰</span>
+            <div>
+                <h3>Current Affairs</h3>
+                <p><span id="homeCurrentCount">0</span> Questions</p>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 GEHU Quiz | Graphic Era Hill University</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

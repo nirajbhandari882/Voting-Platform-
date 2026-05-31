@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEHU Quiz</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+    <div class="quiz-header">
+        <img src="gehu-logo.png" alt="GEHU Logo">
+
+        <div>
+            <h1>Programming Quiz</h1>
+            <p>Choose the correct answer for each question.</p>
+        </div>
+
+        <div class="timer" id="timer">10:00</div>
+    </div>
+
+    <div class="quiz-main">
+
+        <div class="question-card">
+
+            <h3 id="question-number">Question 1 of 5</h3>
+
+            <h2 id="question-text">Question will appear here</h2>
+
+            <div class="options-box" id="options-box"></div>
+
+            <div class="quiz-buttons">
+                <button onclick="prevQuestion()">Previous</button>
+                <button onclick="nextQuestion()">Next</button>
+                <button class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+            </div>
+
+            <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+        </div>
+
+        <div class="navigator-card">
+            <h3>Question Navigator</h3>
+            <div id="question-nav"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Category Details | GEHU Quiz</title>
+<link rel="stylesheet" href="category.css">
+</head>
+
+<body>
+
+<div class="category-page">
+
+    <div class="top-bar">
+        <img src="gehu-logo.png" alt="GEHU Logo">
+        <a href="index.html">← Back Home</a>
+    </div>
+
+    <div class="category-card">
+
+        <div class="category-icon" id="categoryIcon">💻</div>
+
+        <h1 id="categoryTitle">Programming</h1>
+
+        <p id="categoryDescription">
+            Practice questions from this category and improve your knowledge.
+        </p>
+
+        <div class="info-grid">
+
+            <div>
+                <h2 id="questionCount">0</h2>
+                <p>Questions Available</p>
+            </div>
+
+            <div>
+                <h2 id="timeLimit">10</h2>
+                <p>Minutes Time</p>
+            </div>
+
+        </div>
+
+        <button onclick="startQuiz()" id="startBtn">
+            Start Quiz 🚀
+        </button>
+
+    </div>
+
+</div>
+
+<script src="category.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEHU Quiz Result</title>
+<link rel="stylesheet" href="result.css">
+</head>
+
+<body>
+
+<div class="result-card">
+
+    <img src="gehu-logo.png" class="logo" alt="GEHU Logo">
+
+    <h1>Quiz Completed 🎉</h1>
+    <p>Your performance summary</p>
+
+    <div class="score-box">
+        <h2 id="scoreText">0/0</h2>
+        <span id="percentageText">0%</span>
+    </div>
+
+    <div class="result-info">
+        <div>
+            <h3 id="correctText">0</h3>
+            <p>Correct</p>
+        </div>
+
+        <div>
+            <h3 id="wrongText">0</h3>
+            <p>Wrong</p>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <a href="quiz.html">Try Again</a>
+        <a href="dashboard.html">Dashboard</a>
+    </div>
+
+</div>
+
+<script>
+let score = localStorage.getItem("score") || 0;
+let total = localStorage.getItem("total") || 0;
+let wrong = total - score;
+let percentage = total > 0 ? Math.round((score / total) * 100) : 0;
+
+document.getElementById("scoreText").innerText = score + "/" + total;
+document.getElementById("percentageText").innerText = percentage + "%";
+document.getElementById("correctText").innerText = score;
+document.getElementById("wrongText").innerText = wrong;
+</script>
+
+</body>
+</html>

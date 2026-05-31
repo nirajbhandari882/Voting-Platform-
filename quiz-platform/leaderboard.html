@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leaderboard | GEHU Quiz</title>
+<link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+
+<div class="leaderboard-container">
+
+    <div class="top-bar">
+        <img src="gehu-logo.png" alt="GEHU Logo">
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+
+    <h1>🏆 Leaderboard</h1>
+    <p>Ranking based on real student quiz performance.</p>
+
+    <div class="top-three" id="topThree"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Attempts</th>
+                <th>Best Score</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="leaderboardTable"></tbody>
+    </table>
+
+</div>
+
+<script src="leaderboard.js"></script>
+
+</body>
+</html>

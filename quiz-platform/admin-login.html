@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEHU Admin Login</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+rgba(109,40,217,0.15),
+rgba(59,130,246,0.15)
+),
+url("students-photo.png");
+
+background-size:cover;
+background-position:center;
+}
+
+.login-box{
+
+width:420px;
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+
+text-align:center;
+}
+
+.logo{
+width:180px;
+margin-bottom:20px;
+}
+
+h1{
+color:#111827;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#64748b;
+margin-bottom:30px;
+}
+
+input{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+border:1px solid #ddd;
+
+border-radius:12px;
+
+font-size:16px;
+
+outline:none;
+}
+
+input:focus{
+border-color:#6d28d9;
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:linear-gradient(
+135deg,
+#7c3aed,
+#4f00d8
+);
+
+color:white;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.95;
+}
+
+.back-home{
+
+display:block;
+
+margin-top:20px;
+
+text-decoration:none;
+
+color:#6d28d9;
+
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<img
+src="gehu-logo.png"
+class="logo"
+alt="GEHU Logo"
+>
+
+<h1>Admin Login</h1>
+
+<p class="subtitle">
+GEHU Quiz Management Panel
+</p>
+
+<form id="adminLoginForm">
+
+<input
+type="text"
+id="username"
+placeholder="Admin Username"
+required
+>
+
+<input
+type="password"
+id="password"
+placeholder="Admin Password"
+required
+>
+
+<button type="submit">
+Login to Dashboard
+</button>
+
+</form>
+
+<a
+href="index.html"
+class="back-home"
+>
+← Back to Home
+</a>
+
+</div>
+
+<script>
+
+document
+.getElementById("adminLoginForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const username =
+document.getElementById("username").value;
+
+const password =
+document.getElementById("password").value;
+
+if(
+username === "admin" &&
+password === "admin123"
+){
+
+localStorage.setItem(
+"adminLoggedIn",
+"true"
+);
+
+window.location.href =
+"admin-dashboard.html";
+
+}
+else{
+
+alert(
+"Invalid Admin Username or Password"
+);
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

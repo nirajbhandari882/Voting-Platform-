@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Questions | GEHU Quiz</title>
+<link rel="stylesheet" href="manage-questions.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar">
+        <img src="gehu-logo.png" class="admin-logo" alt="GEHU Logo">
+
+        <h2>Admin Panel</h2>
+
+        <a href="admin-dashboard.html">🏠 Dashboard</a>
+        <a class="active" href="manage-questions.html">📝 Manage Questions</a>
+        <a href="manage-students.html">👥 Students</a>
+        <a href="admin-results.html">📊 Results</a>
+        <a href="leaderboard.html">🏆 Leaderboard</a>
+        <a href="logout.html">🚪 Logout</a>
+    </aside>
+
+    <main class="admin-main">
+
+        <div class="page-header">
+            <div>
+                <h1>Manage Quiz Control</h1>
+                <p>Admin can control quiz time, add questions, edit questions and delete questions.</p>
+            </div>
+
+            <div class="count-box">
+                Total Questions: <span id="questionCount">0</span>
+            </div>
+        </div>
+
+        <section class="settings-card">
+            <h2>Quiz Time Control</h2>
+
+            <div class="time-box">
+                <input type="number" id="quizTime" placeholder="Enter quiz time in minutes">
+                <button onclick="saveQuizTime()">Save Time</button>
+            </div>
+
+            <p id="timeMessage">Current Time: <span id="currentTime">10</span> minutes</p>
+        </section>
+
+        <section class="question-form">
+
+            <h2 id="formTitle">Add New Question</h2>
+
+            <input type="hidden" id="editIndex">
+
+            <label>Question</label>
+            <textarea id="question" placeholder="Enter question"></textarea>
+
+            <div class="form-grid">
+
+                <div>
+                    <label>Option A</label>
+                    <input type="text" id="option1" placeholder="Enter option A">
+                </div>
+
+                <div>
+                    <label>Option B</label>
+                    <input type="text" id="option2" placeholder="Enter option B">
+                </div>
+
+                <div>
+                    <label>Option C</label>
+                    <input type="text" id="option3" placeholder="Enter option C">
+                </div>
+
+                <div>
+                    <label>Option D</label>
+                    <input type="text" id="option4" placeholder="Enter option D">
+                </div>
+
+            </div>
+
+            <label>Correct Answer</label>
+            <select id="correctAnswer">
+                <option value="">Select Correct Answer</option>
+                <option value="option1">Option A</option>
+                <option value="option2">Option B</option>
+                <option value="option3">Option C</option>
+                <option value="option4">Option D</option>
+            </select>
+
+            <label>Category</label>
+            <select id="category">
+                <option value="">Select Category</option>
+                <option value="Programming">Programming</option>
+                <option value="Aptitude">Aptitude</option>
+                <option value="General Knowledge">General Knowledge</option>
+                <option value="Current Affairs">Current Affairs</option>
+            </select>
+
+            <div class="form-buttons">
+                <button onclick="saveQuestion()" id="saveBtn">Add Question</button>
+                <button onclick="clearForm()" class="clear-btn">Clear</button>
+            </div>
+
+        </section>
+
+        <section class="question-list">
+
+            <div class="list-header">
+                <h2>Question List</h2>
+                <input type="text" id="searchInput" placeholder="Search question..." onkeyup="searchQuestions()">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Question</th>
+                        <th>Category</th>
+                        <th>Correct Answer</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="questionTable"></tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="admin-auth.js"></script>
+<script src="manage-questions.js"></script>
+
+</body>
+</html>

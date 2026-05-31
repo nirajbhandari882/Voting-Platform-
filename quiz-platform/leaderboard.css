@@ -1,0 +1,170 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+min-height:100vh;
+background:#f4f7fb;
+padding:35px;
+color:#111827;
+}
+
+.leaderboard-container{
+max-width:1150px;
+margin:auto;
+}
+
+.top-bar{
+background:white;
+padding:18px 25px;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+margin-bottom:30px;
+}
+
+.top-bar img{
+width:180px;
+height:auto;
+}
+
+.top-bar a{
+background:#6d28d9;
+color:white;
+text-decoration:none;
+padding:12px 22px;
+border-radius:12px;
+font-weight:bold;
+}
+
+h1{
+font-size:42px;
+color:#111827;
+text-align:center;
+}
+
+.leaderboard-container > p{
+text-align:center;
+color:#64748b;
+margin-top:8px;
+margin-bottom:35px;
+}
+
+.top-three{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-bottom:35px;
+}
+
+.winner{
+background:white;
+padding:30px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+border:3px solid transparent;
+}
+
+.first{
+border-color:#facc15;
+}
+
+.second{
+border-color:#cbd5e1;
+}
+
+.third{
+border-color:#fb923c;
+}
+
+.rank{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.winner h2{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.winner p{
+font-size:30px;
+font-weight:bold;
+color:#6d28d9;
+}
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+th{
+background:#6d28d9;
+color:white;
+padding:18px;
+text-align:left;
+font-size:16px;
+}
+
+td{
+padding:18px;
+border-bottom:1px solid #e5e7eb;
+font-weight:600;
+}
+
+tr:last-child td{
+border-bottom:none;
+}
+
+.excellent{
+background:#dcfce7;
+color:#15803d;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+}
+
+.good{
+background:#dbeafe;
+color:#1d4ed8;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+}
+
+.average{
+background:#ffedd5;
+color:#c2410c;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+}
+
+@media(max-width:800px){
+body{
+padding:20px;
+}
+
+.top-bar{
+flex-direction:column;
+gap:15px;
+}
+
+.top-three{
+grid-template-columns:1fr;
+}
+
+table{
+font-size:13px;
+}
+}

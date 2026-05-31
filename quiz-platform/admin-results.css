@@ -1,0 +1,191 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#111827;
+}
+
+.admin-layout{
+display:flex;
+min-height:100vh;
+}
+
+.admin-sidebar{
+width:270px;
+background:linear-gradient(180deg,#1e087a,#111827);
+padding:25px;
+display:flex;
+flex-direction:column;
+gap:15px;
+color:white;
+}
+
+.admin-logo{
+width:180px;
+background:white;
+padding:10px;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.admin-sidebar h2{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.admin-sidebar a{
+color:white;
+text-decoration:none;
+padding:14px;
+border-radius:10px;
+font-weight:600;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar .active{
+background:#6d28d9;
+}
+
+.admin-main{
+flex:1;
+padding:35px;
+overflow-x:auto;
+}
+
+.page-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.page-header h1{
+font-size:38px;
+}
+
+.page-header p{
+color:#64748b;
+margin-top:6px;
+}
+
+.count-box{
+background:white;
+padding:15px 22px;
+border-radius:14px;
+font-weight:bold;
+box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+
+.count-box span{
+color:#6d28d9;
+}
+
+.results-table-card{
+background:white;
+padding:28px;
+border-radius:22px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.table-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:22px;
+}
+
+.table-header h2{
+font-size:26px;
+}
+
+.table-header input{
+width:300px;
+padding:13px 15px;
+border:1px solid #d1d5db;
+border-radius:12px;
+font-size:15px;
+outline:none;
+}
+
+.table-header input:focus{
+border-color:#6d28d9;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+min-width:900px;
+}
+
+th{
+background:#6d28d9;
+color:white;
+padding:16px;
+text-align:left;
+}
+
+td{
+padding:16px;
+border-bottom:1px solid #e5e7eb;
+font-weight:600;
+}
+
+.excellent{
+background:#dcfce7;
+color:#15803d;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+}
+
+.good{
+background:#dbeafe;
+color:#1d4ed8;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+}
+
+.average{
+background:#ffedd5;
+color:#c2410c;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+}
+
+.empty{
+text-align:center;
+color:#64748b;
+font-weight:bold;
+}
+
+@media(max-width:900px){
+.admin-layout{
+flex-direction:column;
+}
+
+.admin-sidebar{
+width:100%;
+}
+
+.page-header,
+.table-header{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.table-header input{
+width:100%;
+}
+
+table{
+font-size:13px;
+}
+}
